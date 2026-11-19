@@ -1,22 +1,16 @@
-#include <stdio.h>
-#include <string.h>
+#include <stdio.h> 
+#include <string.h> 
 
-int main(int argc, char *argv[])
-{
-    if (argc < 2) {
-        printf("Usage: %s <word>\n", argv[0]);
-        return 1;
-    }
+int main() { 
 
-    char word[256];
-    strcpy(word, argv[1]);
+    char word[] = "infrastructure"; 
 
-    int len = strlen(word);
+    printf("Hello!\n"); 
 
-    for (int i = len - 1; i >= 0; i--) {
-        putchar(word[i]);
-    }
-    putchar('\n');
+    for (int i = strlen(word) - 1; i >= 0; i--) putchar(word[i]); 
 
-    return 0;
-}
+    printf("\n"); 
+
+    return 0; 
+
+} 
